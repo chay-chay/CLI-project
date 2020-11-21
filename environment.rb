@@ -1,7 +1,6 @@
-#require all of our files so they can talk to each other
-require 'bundler' #require all gems listed 
-Bundler.require #require all those gems
- #require something is not in the program
+require 'bundler' 
+Bundler.require 
+
 require 'lolize/auto'
 
 

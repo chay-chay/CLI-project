@@ -1,5 +1,3 @@
-#command line interface
-# #connect with the user & connect our files together
 class Cli 
 
     @@products = ["blush", "bronzer", "eyeliner", "eyeshadow", "foundation", "lipstick", "mascara", "nail_polish"]
@@ -112,7 +110,6 @@ class Cli
         puts "\n#{index+1}. #{product.name.capitalize.strip}"
         puts "Price (£):   #{product.price.capitalize.strip}"
         puts "Description:\n#{product.description.capitalize.strip}\n"
-        
         end
     end
 
@@ -145,7 +142,6 @@ class Cli
             show_products
             secondary_input
         end
-      
     end
 
     def show_products

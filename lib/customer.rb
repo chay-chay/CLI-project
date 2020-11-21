@@ -1,11 +1,11 @@
 class Customer
     attr_accessor :name, :order
 
-    @@all = [] #Class variable and use anywhere in the class
+    @@all = []
    
     def initialize(name)
-        @name = name #instance variable => use specific method
-        @order = [] #pushs into all array  
+        @name = name
+        @order = []
         save    
     end
 
@@ -14,7 +14,7 @@ class Customer
     end
 
     def self.all
-        @@all #return @@all.all
+        @@all
     end
 
     def order=(order)
