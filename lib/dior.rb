@@ -6,7 +6,11 @@ class Dior
         @product_type = product_type 
         @price = price
         @description = description
-        @@all << self #auto save
+        save #auto save
+    end
+
+    def save
+        @@all << self
     end
 
     def self.all

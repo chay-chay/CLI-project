@@ -8,8 +8,7 @@ class Cli
     def start   
         welcome
         input_name
-        main
-        
+        main 
     end
 
     def main
@@ -121,19 +120,18 @@ class Cli
         input = gets.strip.to_i
         system "clear"
         index = input_to_index(input)
-        if index.between?(0, Dior.all.size)
-        Dior.all.each.with_index do |product, i|
+        if index.between?(0, Dior.all.size-1)
+        Dior.all.select.with_index do |product, i|
                 if index == i 
-                    @customer.order=( product )
+                    @customer.order= ( product ) 
                     puts "========================================================================"
                     puts "\n#{@customer.name}, Product has been added to your cart.\n "
                     puts "Product details:\n"
                     puts "Product Type: #{product.product_type.strip}"
                     puts "Product:      #{product.name.strip}"
                     puts "Price (£):    #{product.price.strip}"
-                    
                 end  
-            end
+            end 
         elsif input == 100
             exit
         
@@ -151,7 +149,7 @@ class Cli
     end
 
     def show_products
-        Dior.all.each.with_index do |product, index|
+        Dior.all.select.with_index do |product, index|
                 puts "\n#{index+1}. #{product.name.capitalize.strip}"
                 puts "Price (£):   #{product.price.capitalize.strip}"
                 puts "Description:\n#{product.description.capitalize.strip}\n"
@@ -176,7 +174,6 @@ class Cli
             checkout
         
         else
-            # puts ""
             puts "\nWe're sorry but this is not a valid response."
             puts "Please try again!\n"
             continue_shopping
@@ -202,7 +199,6 @@ class Cli
             puts "   Price (£):    #{order.price.strip}"
             puts ""
            
-        
         end
         sleep(1)
         puts "\n10!\n"

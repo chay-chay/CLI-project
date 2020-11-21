@@ -1,6 +1,9 @@
 #! /usr/bin/env ruby
 
 require_relative '../environment.rb'
+#require_relative => requiring something in program
+#require => 
+
 
 cli = Cli.new
 cli.start
