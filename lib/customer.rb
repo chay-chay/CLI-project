@@ -6,6 +6,10 @@ class Customer
     def initialize(name)
         @name = name
         @order = []
+        save    
+    end
+
+    def save
         @@all << self
     end
 
@@ -13,12 +17,8 @@ class Customer
         @@all
     end
 
-    # def orders
-    #     Order.all.select{|order| order.customer == self}
-    # end
     def order=(order)
         @order << order
     end
-
   
 end
