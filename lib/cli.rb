@@ -237,10 +237,6 @@ class Cli
         @@products
     end
 
-    def self.all
-        @@all
-    end
-
     def display_products
         @@products.each_with_index{|product, index| 
         puts "#{index+1}. #{product.capitalize}"}
