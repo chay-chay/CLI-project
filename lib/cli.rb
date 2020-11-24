@@ -68,7 +68,7 @@ class Cli
         index = input_to_index(input)
 
         if index.between?(0,7)
-           @@products.select.with_index do |product, i|
+           @@products.select.with_index do |product, i| 
                 if index == i
                     Dior.all.clear
                     Api.new( product )
@@ -91,11 +91,11 @@ class Cli
         end
     end
    
-    def display_products
-        @@products.select.with_index do |product, i|
-        view_by_product_type ( product )
-        end
-    end
+    # def display_products
+    #     @@products.select.with_index do |product, i|
+    #     view_by_product_type ( product )
+    #     end
+    # end
   
     def view_by_product_type(product)
         puts "================================================================================="
@@ -128,6 +128,7 @@ class Cli
                     puts "Product:      #{product.name.strip}"
                     puts "Price (£):    #{product.price.strip}"
                 end  
+                
             end 
         elsif input == 100
             exit
