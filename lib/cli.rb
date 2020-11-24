@@ -91,12 +91,6 @@ class Cli
         end
     end
    
-    # def display_products
-    #     @@products.select.with_index do |product, i|
-    #     view_by_product_type ( product )
-    #     end
-    # end
-  
     def view_by_product_type(product)
         puts "================================================================================="
         puts " "
