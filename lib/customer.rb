@@ -13,10 +13,11 @@ class Customer
         @@all << self
     end
 
+
     def self.all
         @@all
     end
-
+    
     def order=(order)
         @order << order
     end
