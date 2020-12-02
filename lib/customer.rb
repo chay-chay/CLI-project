@@ -1,5 +1,6 @@
 class Customer
-    attr_accessor :name, :order
+    attr_accessor :name
+    attr_reader :order
 
     @@all = []
    
@@ -12,7 +13,6 @@ class Customer
     def save
         @@all << self
     end
-
 
     def self.all
         @@all
